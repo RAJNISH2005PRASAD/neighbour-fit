@@ -43,6 +43,8 @@ export default function MatchPage() {
   }
 
   const handleSubmit = () => {
+    // Store form data in localStorage to pass to results page
+    localStorage.setItem("neighborFitPreferences", JSON.stringify(formData))
     window.location.href = "/results"
   }
 
@@ -73,6 +75,7 @@ export default function MatchPage() {
             {step === 1 && (
               <div className="space-y-6">
                 <h3 className="text-lg font-semibold">Basic Information</h3>
+
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="city">Preferred City/Region</Label>
@@ -84,13 +87,13 @@ export default function MatchPage() {
                         <SelectItem value="mumbai">Mumbai, India</SelectItem>
                         <SelectItem value="delhi">Delhi, India</SelectItem>
                         <SelectItem value="bangalore">Bangalore, India</SelectItem>
-                        <SelectItem value="chennai">Chennai, India</SelectItem>
                         <SelectItem value="hyderabad">Hyderabad, India</SelectItem>
-                        <SelectItem value="kolkata">Kolkata, India</SelectItem>
                         <SelectItem value="pune">Pune, India</SelectItem>
+                        <SelectItem value="chennai">Chennai, India</SelectItem>
+                        <SelectItem value="kolkata">Kolkata, India</SelectItem>
                         <SelectItem value="ahmedabad">Ahmedabad, India</SelectItem>
-                        <SelectItem value="jaipur">Jaipur, India</SelectItem>
-                        <SelectItem value="lucknow">Lucknow, India</SelectItem>
+                        <SelectItem value="gurgaon">Gurgaon, India</SelectItem>
+                        <SelectItem value="noida">Noida, India</SelectItem>
                         <SelectItem value="new-york">New York, USA</SelectItem>
                         <SelectItem value="london">London, UK</SelectItem>
                         <SelectItem value="tokyo">Tokyo, Japan</SelectItem>
@@ -101,6 +104,11 @@ export default function MatchPage() {
                         <SelectItem value="dubai">Dubai, UAE</SelectItem>
                         <SelectItem value="paris">Paris, France</SelectItem>
                         <SelectItem value="amsterdam">Amsterdam, Netherlands</SelectItem>
+                        <SelectItem value="barcelona">Barcelona, Spain</SelectItem>
+                        <SelectItem value="stockholm">Stockholm, Sweden</SelectItem>
+                        <SelectItem value="zurich">Zurich, Switzerland</SelectItem>
+                        <SelectItem value="hong-kong">Hong Kong</SelectItem>
+                        <SelectItem value="seoul">Seoul, South Korea</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -243,7 +251,9 @@ export default function MatchPage() {
                             <button
                               key={num}
                               type="button"
-                              className={`w-8 h-8 rounded border ${value >= num ? "bg-blue-500 text-white" : "bg-white text-gray-600"}`}
+                              className={`w-8 h-8 rounded border ${
+                                value >= num ? "bg-blue-500 text-white" : "bg-white text-gray-600"
+                              }`}
                               onClick={() =>
                                 setFormData({
                                   ...formData,
