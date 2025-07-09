@@ -82,10 +82,20 @@ export default function MatchPage() {
                         <SelectValue placeholder="Select city" />
                       </SelectTrigger>
                       <SelectContent>
+                        <SelectItem value="mumbai">Mumbai, India</SelectItem>
+                        <SelectItem value="delhi">Delhi, India</SelectItem>
+                        <SelectItem value="bangalore">Bangalore, India</SelectItem>
+                        <SelectItem value="chennai">Chennai, India</SelectItem>
+                        <SelectItem value="hyderabad">Hyderabad, India</SelectItem>
+                        <SelectItem value="kolkata">Kolkata, India</SelectItem>
+                        <SelectItem value="pune">Pune, India</SelectItem>
+                        <SelectItem value="ahmedabad">Ahmedabad, India</SelectItem>
+                        <SelectItem value="jaipur">Jaipur, India</SelectItem>
+                        <SelectItem value="lucknow">Lucknow, India</SelectItem>
                         <SelectItem value="new-york">New York, USA</SelectItem>
                         <SelectItem value="london">London, UK</SelectItem>
                         <SelectItem value="tokyo">Tokyo, Japan</SelectItem>
-                        <SelectItem value="sydney">Sydney, Australia</SelectItem>
+                        <SelectItem value="sydney">Sydney, Australia<SelectItem>
                         <SelectItem value="toronto">Toronto, Canada</SelectItem>
                         <SelectItem value="berlin">Berlin, Germany</SelectItem>
                         <SelectItem value="singapore">Singapore</SelectItem>
