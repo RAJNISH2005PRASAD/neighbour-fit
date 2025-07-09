@@ -73,7 +73,6 @@ export default function MatchPage() {
             {step === 1 && (
               <div className="space-y-6">
                 <h3 className="text-lg font-semibold">Basic Information</h3>
-
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="city">Preferred City/Region</Label>
@@ -95,7 +94,7 @@ export default function MatchPage() {
                         <SelectItem value="new-york">New York, USA</SelectItem>
                         <SelectItem value="london">London, UK</SelectItem>
                         <SelectItem value="tokyo">Tokyo, Japan</SelectItem>
-                        <SelectItem value="sydney">Sydney, Australia<SelectItem>
+                        <SelectItem value="sydney">Sydney, Australia</SelectItem>
                         <SelectItem value="toronto">Toronto, Canada</SelectItem>
                         <SelectItem value="berlin">Berlin, Germany</SelectItem>
                         <SelectItem value="singapore">Singapore</SelectItem>
@@ -244,9 +243,7 @@ export default function MatchPage() {
                             <button
                               key={num}
                               type="button"
-                              className={`w-8 h-8 rounded border ${
-                                value >= num ? "bg-blue-500 text-white" : "bg-white text-gray-600"
-                              }`}
+                              className={`w-8 h-8 rounded border ${value >= num ? "bg-blue-500 text-white" : "bg-white text-gray-600"}`}
                               onClick={() =>
                                 setFormData({
                                   ...formData,
